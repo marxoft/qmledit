@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=QMLEdit
+Icon=qmledit
+Exec=/opt/qt-components-hildon-viewer/bin/viewer /opt/qmledit/qml/MainWindow.qml

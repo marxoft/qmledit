@@ -1,0 +1,41 @@
+Source: qmledit
+Section: user/utilities
+Priority: optional
+Maintainer: Stuart Howarth <showarth@marxoft.co.uk>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.3
+Homepage: https://github.com/marxoft/qmledit
+
+Package: qmledit
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, qt-components-hildon (>= 0.19.0), qt-components-hildon-viewer
+Description: A tab-based text editor
+ QMLEdit is a tab-based text editor written entirely in QML, using Qt Components Hildon. 
+XB-Maemo-Display-Name: QMLEdit
+XB-Maemo-Icon-26:
+ iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QAEAA6AIa0hGquAAAACXBI
+ WXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3woJACgxFIf94QAABSJJREFUaN7tmn9MlHUcx1/PDw7u
+ npOr/MUdEiL+mL8gkSFMMRV0KsMmhlM5lTZQ0zJRMWMlliWU1dpsNcPc0uZWVmu1tdXmj9LKlm1k
+ ypye2jEdqRgCBwd3B09/3EK8GTyHdwe39f3rnu35Pnu9P5/X831+3COoqqoSxkMGcLS6uGivp7Mz
+ PLKIosDY+CEYDTpvgIv2eqzbP8fR6gqLAEaDjo8rl5Ay3uIN0Nmp4mh10RwmAf5lBhAJ8zEgAggC
+ mIw69JEiqtrp/0nc36PEmoY1J4mr125yutrOp99d4M8bTgRBHPgB9pRkUfRkGgAJcUOZkzGR9QUz
+ Ka38jCPH7AiSbmAqJAhQujq9C/6vm7e5Yr+Ox+PhoWgjVbsL2VowmU6Pc2AG2LoqnbI1swGov32H
+ pUU7ScopZ3vl4a59Xnw2j+VZI1A72gdWgD0lWV3wbreHWYs3UV0rIEeP5JGhlnv23bExj2ipEVXt
+ 6P8AggDbCu9q83dDI1PnFmNvGoRoGMbmlRmUrc2+Z44lZgh5WWNR3c7+D1C6Op0Xir2Vv9PYTH7R
+ Tq42KEiG4WyyprPj6az7zitaPo9OV+N9l1i5P1YbVVWZnbcJ220DkhLDuvxUdq7P/s+5k8Ynorod
+ gBr6Dvhq09jkIHVuMbZ6PZJhOEWLU6gsmd/jMV596wCIEf2jUHdtmpod5BeVc/FWJJIhhjVLpvJm
+ 6cJe4D+kouookmK+L64cKm0A5uZvoaYuAkkxs2JBEm9sWaAB/jiyKRFR1oeuA77atLQ4SV+wjpo6
+ GUmJYem8ibz30qJetamoOkZED/BB60B3bVpanCwtLuf8dRFJMWPNSWJvWa6Gyh9DNiUiyFGhvRfy
+ 1Wb+sq1U14KkWFg0axx7y3IRBOGBtAmKQr7aOJ1tZOZuoNoOkmImZ+YYDlbk9wJ/gIqq471qE5QA
+ 3bVxOttYtvZlqu0qkmImL2sCB3fna3D+KLJpVK/aBFwhX20WrtjGmcsdSIqFOdMS+KD8CSRJDJg2
+ AeuArzbt7S7m5D3HmcseJMXM46nxfPFOAbIsBVSbgAXoro3L5aZg/Sv8anMhKWYWZo7hyNvLg6JN
+ QBTy1SbX+jw/XXAiKRamJcVxYFceugi5R20q958gwjS6z/B9CuD7JOV2e7rBxzJ1goVv9xVqqLxX
+ mweB75NC3bVxuz2s3LCLH2takBQLs9NG8fW7Vk1X2AfRps8d8NVmcWEZ3//RjGSMZfLYGA5VLMGg
+ 1/UIX7k/MJX3K4AgwGZrWhe8x+O5C6/EMjFxGCc/Ku618pX7vUulIEWG9sXWYJOeLYWZADQ7Wlj1
+ zGuc+L0RSbGQ8Vgc37y/Ups20aMCCq85gHmwHn2UV42z5218dbIWyTiC0fFDOPx6PqZB+pBq43eA
+ jOTYrt/TpyXz5b6NTEqI5udDa3g42qBNmyDAaz4HMlPi79nOnpFM9oxkbc4HQRu/OqCqKpmpiX4d
+ 1At/wgsfpMpr7oBJkTENMvgPbwpu5TV3IHNKnJ/wx5GjE0ICrynAjJRHB5w2mhVSVZXpU0Z2bbtc
+ bpxt7bS1t3O97hanTp/lh1/Oceo3Gw6PEjJtNAeI0knU3Wzg3PkaLl25hs1+A1ttPZdqG2jzyAiy
+ AUHWI0SNQxZlTX9IhDRAu9vDU2Wf4GxtwqNGIEiRCJIRokxIgggIPT7j9nsAEGnp0EOkHqmfQfu8
+ jAoDFDyob+b+D+CvQqIoYDTowgbaaNAhil61BVVV1XD+2EMI989t/gHZde1d1zw01gAAAABJRU5E
+ rkJggg==
