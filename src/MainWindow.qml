@@ -190,7 +190,7 @@ Window {
         
         autoRepeat: false
         shortcut: "Ctrl+L"
-        text: qsTr("Split view")
+        text: qsTr("Toggle split view")
         onTriggered: splitView.split = !splitView.split
     }
         
@@ -345,9 +345,28 @@ Window {
         id: splitView
         
         anchors {
-            fill: parent
+            left: parent.left
+            right: parent.right
+            top: parent.top
+            bottom: infoLabel.top
             margins: platformStyle.paddingMedium
         }
+    }
+    
+    Label {
+        id: infoLabel
+        
+        anchors {
+            right: parent.right
+            rightMargin: platformStyle.paddingMedium
+            bottom: parent.bottom
+        }
+        font.pointSize: platformStyle.fontSizeSmall
+        text: splitView.currentView.currentDocument ? qsTr("Line") + ": "
+              + (splitView.currentView.currentDocument.currentLine + 1) + " " + qsTr("Col") + ": "
+              + (splitView.currentView.currentDocument.currentColumn + 1) + " " + qsTr("Chars") + ": "
+              + splitView.currentView.currentDocument.text.length
+              : ""
     }
     
     InformationBox {
