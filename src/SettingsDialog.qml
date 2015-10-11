@@ -29,6 +29,7 @@ Dialog {
         anchors {
             left: parent.left
             right: button.left
+            rightMargin: platformStyle.paddingMedium
             top: parent.top
             bottom: parent.bottom
         }
