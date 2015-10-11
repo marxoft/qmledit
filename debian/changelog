@@ -1,3 +1,9 @@
+qmledit (0.1.0) unstable; urgency=low
+
+  * Add text label displaying current line/column and length of the document.
+
+ -- Stuart Howarth <showarth@marxoft.co.uk>  Sun, 11 Oct 2015 03:31:38 +0000
+
 qmledit (0.0.1) unstable; urgency=low
 
   * Initial Release.
