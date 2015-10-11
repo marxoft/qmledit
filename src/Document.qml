@@ -26,6 +26,7 @@ FocusScope {
     property string title: documentTitle
     property string documentTitle: qsTr("Untitled")
     property int currentLine
+    property int currentColumn
     property int lineCount
     property alias text: textEdit.text
     
@@ -193,6 +194,13 @@ FocusScope {
         onError: informationBox.information(qsTr("File error") + ": " + errorString)
     }
     
+    FontMetrics {
+        id: fontMetrics
+        
+        font.family: settings.fontFamily
+        font.pointSize: settings.fontSize
+    }
+    
     Rectangle {
         id: background
         
@@ -232,9 +240,10 @@ FocusScope {
         TextEdit {
             id: textEdit
                         
-            property int lineCount: Math.floor(height / lineHeight)
+            property int lineCount: height / lineHeight
             property int lineHeight: cursorRectangle.height
             property int currentLine: cursorRectangle.y / lineHeight
+            property int currentColumn: cursorRectangle.x / fontMetrics.maximumCharacterWidth
             
             width: flickable.width
             color: settings.textColor
@@ -248,6 +257,7 @@ FocusScope {
             wrapMode: settings.wrapText ? TextEdit.WordWrap : TextEdit.NoWrap
             onCursorRectangleChanged: flickable.ensureVisible(cursorRectangle)
             onCurrentLineChanged: root.currentLine = currentLine
+            onCurrentColumnChanged: root.currentColumn = currentColumn
             onLineCountChanged: root.lineCount = lineCount
             onTextChanged: if (!root.dirty) root.dirty = true;
             
@@ -302,6 +312,8 @@ FocusScope {
                 clip: true
                 interactive: false
                 highlightMoveDuration: 1
+                horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
+                verticalScrollBarPolicy: Qt.ScrollBarAlwaysOff
                 model: textEdit.lineCount
                 currentIndex: textEdit.currentLine
                 delegate: Label {
@@ -324,14 +336,7 @@ FocusScope {
             x: settings.rightMargin * fontMetrics.maximumCharacterWidth
             width: 1
             height: root.height
-            color: Qt.darker(settings.highlightColor)
-            
-            FontMetrics {
-                id: fontMetrics
-                
-                font.family: settings.fontFamily
-                font.pointSize: settings.fontSize
-            }
+            color: Qt.darker(settings.highlightColor)            
         }
     }
     
