@@ -56,7 +56,7 @@ Dialog {
                     verticalAlignment: Text.AlignVCenter
                     font.bold: true
                     font.pointSize: platformStyle.fontSizeLarge
-                    text: "QMLEdit 0.0.1"
+                    text: "QMLEdit 0.1.0"
                 }
             }
         
