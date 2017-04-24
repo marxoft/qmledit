@@ -1,0 +1,5 @@
+{
+    "name": "s",
+    "description": "Substitutes text using the specified pattern using sed syntax (e.g. /foo/bar/g)."
+}
+

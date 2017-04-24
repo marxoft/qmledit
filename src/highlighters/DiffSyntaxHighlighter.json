@@ -1,0 +1,5 @@
+{
+    "name": "Diff",
+    "globs": ["*.diff", "*.patch", "*.rej"]
+}
+

@@ -1,0 +1,5 @@
+{
+    "name": "q",
+    "description": "Closes the current document if there are no unsaved changes."
+}
+

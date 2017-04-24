@@ -1,0 +1,5 @@
+{
+    "name": "qa",
+    "description": "Closes all open documents where there are no unsaved changes."
+}
+

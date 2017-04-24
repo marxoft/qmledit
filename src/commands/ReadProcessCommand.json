@@ -1,0 +1,5 @@
+{
+    "name": "r!",
+    "description": "Inserts the output of the specified command into the current document at the current cursor position."
+}
+

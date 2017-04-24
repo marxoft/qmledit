@@ -1,0 +1,5 @@
+{
+    "name": "r",
+    "description": "Inserts the contents of the specified file into the current document at the current cursor position."
+}
+

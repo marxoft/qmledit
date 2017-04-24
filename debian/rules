@@ -12,7 +12,6 @@
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
-
 	touch configure-stamp
 
 
@@ -20,14 +19,12 @@ build: build-stamp
 
 build-stamp: configure-stamp  
 	dh_testdir
-
 	touch $@
 
 clean: 
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp configure-stamp
-
 	dh_clean 
 
 install: build
@@ -35,13 +32,16 @@ install: build
 	dh_testroot
 	dh_clean -k 
 	dh_installdirs
-
-	mkdir -p debian/qmledit/opt/qmledit/qml
-	mkdir -p debian/qmledit/usr/share/applications/hildon
-	mkdir -p debian/qmledit/usr/share/icons/hicolor/64x64/apps
-	cp src/*.qml debian/qmledit/opt/qmledit/qml
+	mkdir -p debian/qmledit/opt/qmledit/
+	cp -R src/app/ src/commands/ src/highlighters/ src/themes/ debian/qmledit/opt/qmledit/
+	mkdir -p debian/qmledit/usr/bin/
+	cp src/qmledit debian/qmledit/usr/bin/
+	mkdir -p debian/qmledit/usr/share/applications/hildon/
 	cp desktop/qmledit.desktop debian/qmledit/usr/share/applications/hildon
-	cp desktop/64/qmledit.png debian/qmledit/usr/share/icons/hicolor/64x64/apps
+	mkdir -p debian/qmledit/usr/share/icons/hicolor/48x48/apps/
+	cp desktop/48/qmledit.png debian/qmledit/usr/share/icons/hicolor/48x48/apps/
+	mkdir -p debian/qmledit/usr/share/icons/hicolor/64x64/apps/
+	cp desktop/64/qmledit.png debian/qmledit/usr/share/icons/hicolor/64x64/apps/
 
 # Build architecture-independent files here.
 binary-indep: build install
@@ -73,7 +73,7 @@ binary-arch: build install
 #	dh_perl
 #	dh_makeshlibs
 	dh_installdeb
-#	dh_shlibdeps # Uncomment this line for use without Qt Creator
+	# dh_shlibdeps
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb

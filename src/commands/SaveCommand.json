@@ -1,0 +1,5 @@
+{
+    "name": "w",
+    "description": "Writes the current document to a file. If no filename is provided, the document's existing filename is used."
+}
+

@@ -1,0 +1,5 @@
+{
+    "name": "qe",
+    "description": "Closes all open documents and quits the application, if there are no unsaved changes."
+}
+

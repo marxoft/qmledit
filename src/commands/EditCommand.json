@@ -1,0 +1,5 @@
+{
+    "name": "e",
+    "description": "Opens the specified file for editing, or an empty document if no filename is provided. If the filename points to a directory, a file browser is displayed."
+}
+

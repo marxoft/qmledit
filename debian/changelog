@@ -1,8 +1,14 @@
 qmledit (0.1.0) unstable; urgency=low
 
-  * Add text label displaying current line/column and length of the document.
+  * Add commandline and support for custom commands.
+  * Add support for themes.
+  * Add support for syntax highlighting.
+  * Add support for opening one or more files at startup using commandline
+    arguments.
+  * Add options to view fullscreen and hide the tab bar.
+  * Bug fixes.
 
- -- Stuart Howarth <showarth@marxoft.co.uk>  Sun, 11 Oct 2015 03:31:38 +0000
+ -- Stuart Howarth <showarth@marxoft.co.uk>  Sun, 23 Apr 2017 20:26:38 +0000
 
 qmledit (0.0.1) unstable; urgency=low
 

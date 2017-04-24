@@ -1,0 +1,5 @@
+{
+    "name": "set",
+    "description": "Sets the specified option to the specified value (e.g. set foo bar). If no option is provided, a list of the available options is displayed. If an option is provided without a value, the current value of the option will be displayed."
+}
+

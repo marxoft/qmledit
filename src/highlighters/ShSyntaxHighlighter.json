@@ -1,0 +1,5 @@
+{
+    "name": "sh",
+    "globs": ["*.sh", "bashrc", ".profile", ".bash_profile"]
+}
+

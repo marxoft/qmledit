@@ -1,0 +1,5 @@
+{
+    "name": "JavaScript",
+    "globs": ["*.js", "*.node"]
+}
+

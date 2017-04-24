@@ -1,0 +1,5 @@
+{
+    "name": "f!",
+    "description": "Searches for the previous occurrence of the specified pattern in the current document. The pattern can be either a string (e.g. 'foo'), or a regular expression (e.g. /foo/i)."
+}
+

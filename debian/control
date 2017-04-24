@@ -7,10 +7,12 @@ Standards-Version: 3.7.3
 Homepage: https://github.com/marxoft/qmledit
 
 Package: qmledit
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, qt-components-hildon (>= 0.19.0), qt-components-hildon-viewer
-Description: A tab-based text editor
- QMLEdit is a tab-based text editor written entirely in QML, using Qt Components Hildon. 
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, qt-components-hildon (>= 0.25.0), qt-components-hildon-viewer (>= 0.1.0)
+Description: An extensible tab-based text editor
+ QMLEdit is a tab-based text editor written entirely in QML, using Qt Components Hildon.
+ The functionality of the editor can be extended with custom commands, and additional 
+ themes and syntax highlighters are also supported.
 XB-Maemo-Display-Name: QMLEdit
 XB-Maemo-Icon-26:
  iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QAEAA6AIa0hGquAAAACXBI
