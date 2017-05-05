@@ -1,0 +1,5 @@
+{
+    "name": "e!",
+    "description": "Opens the specified file for editing in the current document, discarding any unsaved changes. Reloads the existing file if no filename is provided. If the filename points to a directory, a file browser is displayed."
+}
+

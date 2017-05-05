@@ -20,10 +20,7 @@ import org.hildon.utils 1.0
 Command {
     enabled: documentView.currentDocument != null
     onAccepted: {
-        if (documentView.currentDocument.modified) {
-            error(qsTr("Document has unsaved changes"));
-        }
-        else if (documentView.currentDocument.readOnly) {
+        if (documentView.currentDocument.readOnly) {
             error(qsTr("Document is read-only"));
         }
         else if (typeof documentView.currentDocument["open"] != "function") {
