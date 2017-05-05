@@ -153,7 +153,7 @@ Document {
      * \type:string
      * The filename used by the document.
      */
-    property alias fileName: info.fileName
+    property alias fileName: info.absoluteFilePath
 
     /*!
      * Copies the selected text to the clipboard.
@@ -394,6 +394,8 @@ Document {
     /*!
      * Opens the file at \a filePath and reads its contents into the document.
      *
+     * If no path is specified, the existing file is used.
+     *
      * Returns \c true if the operation is successful.
      *
      * @param type:string filePath
@@ -401,7 +403,15 @@ Document {
      */
     function open(filePath) {
         var oldFileName = info.file;
-        info.file = filePath;
+
+        if (filePath) {
+            info.file = filePath;
+        }
+
+        if (!info.file) {
+            error(qsTr("Filename is empty"));
+            return false;
+        }
 
         if (info.exists) {
             file.fileName = info.absoluteFilePath;
@@ -410,6 +420,7 @@ Document {
                 text = file.readAll();
                 file.close();
                 document.modified = false;
+                title = info.fileName;
                 return true;
             }
 
@@ -420,6 +431,7 @@ Document {
 
         clear();
         document.modified = false;
+        title = info.fileName;
         return true;
     }
 
@@ -452,7 +464,8 @@ Document {
             file.write(text);
             file.close();
             document.modified = false;
-            information(fileName + " " + lineCount + "L, " + text.length + "C " + qsTr("written"));
+            title = info.fileName;
+            information(info.fileName + " " + lineCount + "L, " + text.length + "C " + qsTr("written"));
             return true;
         }
 
@@ -468,7 +481,6 @@ Document {
         textEdit.forceActiveFocus();
     }
     
-    title: fileName ? fileName : qsTr("[No Name]")
     statusText: (currentLine + 1) + "/" + lineCount + "," + currentColumn
 
     Rectangle {
