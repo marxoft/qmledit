@@ -18,7 +18,7 @@ import QtQuick 1.0
 
 Command {
     onAccepted: {
-        documentView.addDocument(Qt.createComponent(Qt.resolvedUrl("../app/HelpDocument.qml")));
+        documentView.addDocument(createComponent(Qt.resolvedUrl("../app/HelpDocument.qml")));
         finished();
     }
 }
