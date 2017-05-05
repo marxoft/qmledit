@@ -67,10 +67,15 @@ Window {
         MenuItem {
             text: qsTr("Reload")
             autoRepeat: false
-            onTriggered: reload()
+            onTriggered: root.reload()
         }
     }
     onDocumentChanged: reload()
+
+    Connections {
+        target: documentView
+        onDocumentsChanged: if (!document) close();
+    }
 
     Component {
         id: informationBox
