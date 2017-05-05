@@ -24,6 +24,14 @@ Window {
 
     property alias currentTheme: themes.currentTheme
 
+    function createComponent(url) {
+        return Qt.createComponent(url);
+    }
+
+    function createQmlObject(qml, parent, filepath) {
+        return Qt.createQmlObject(qml, parent, filepath);
+    }
+
     title: statusBar.titleText + " - QMLEdit"
 
     Action {
@@ -112,10 +120,11 @@ Window {
         // General
         property bool highlightCurrentLine: false
         property bool showLineNumbers: false
-        property bool showTabBar: true
         property bool syntaxHighlighting: true
         property bool wrapText: false
+        property bool showTabBar: true
         property bool fullScreen: false
+        property bool showHelpOnStartup: true
         property string commandShortcut: qsTr("Ctrl+.")
         
         // Font
@@ -156,7 +165,7 @@ Window {
             documentView.openDocument(args[i]);
         }
 
-        if (!documentView.count) {
+        if ((!documentView.count) && (settings.showHelpOnStartup)) {
             documentView.addDocument(Qt.createComponent(Qt.resolvedUrl("HelpDocument.qml")));
         }
 
