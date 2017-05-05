@@ -15,12 +15,12 @@
  */
 
 import QtQuick 1.0
-import "QmlPreviewCommand.js" as JS
 
 Command {
     enabled: documentView.currentDocument !== null
     onAccepted: {
-        var pw = JS.createWindow(window);
+        var component = createComponent(Qt.resolvedUrl("QmlPreviewWindow.qml"));
+        var pw = component.createObject(window);
 
         if (pw) {
             pw.document = documentView.currentDocument;
