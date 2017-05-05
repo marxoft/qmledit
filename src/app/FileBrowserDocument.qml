@@ -21,6 +21,9 @@ TextEditDocument {
     id: root
 
     property alias path: directory.path
+    property alias filter: directory.filter
+    property alias nameFilters: directory.nameFilters
+    property alias sorting: directory.sorting
 
     signal selected(string filePath)
     
