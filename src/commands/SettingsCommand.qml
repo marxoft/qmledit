@@ -15,8 +15,6 @@
  */
 
 import QtQuick 1.0
-import "../app/definitions.js" as Definitions
-import "../app"
 
 Command {
     onAccepted: {
@@ -24,7 +22,7 @@ Command {
         var prop = args.shift();
 
         if (!prop) {
-            documentView.addDocument(settingsDocument).load();
+            documentView.addDocument(createComponent(Qt.resolvedUrl("../app/SettingsDocument.qml")));
         }
         else if (settings.hasOwnProperty(prop)) {
             if (args.length > 0) {
@@ -46,32 +44,6 @@ Command {
         }
 
         finished();
-    }
-
-    Component {
-        id: settingsDocument
-
-        TextEditDocument {
-            function load() {
-                var t = "";
-
-                for (var prop in settings) {
-                    var value = settings[prop];
-
-                    if (typeof value != "function") {
-                        t += prop + "=" + value + "\n";
-                    }
-                }
-
-                text = t;
-            }
-
-            title: qsTr("Settings")
-            statusText: (lineCount - 1) + " " + qsTr("properties")
-            readOnly: true
-            highlightCurrentLine: false
-            showLineNumbers: false
-        }
     }
 }
 
