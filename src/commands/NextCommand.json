@@ -1,0 +1,5 @@
+{
+    "name": "gt",
+    "description": "Go to the next document. Optionally, an index (starting at 1) may be specified."
+}
+
