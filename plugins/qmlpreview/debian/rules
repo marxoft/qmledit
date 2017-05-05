@@ -33,7 +33,7 @@ install: build
 	dh_clean -k 
 	dh_installdirs
 	mkdir -p debian/qmledit-qmlpreview/opt/qmledit/commands/
-	cp QmlPreviewCommand.js QmlPreviewCommand.json QmlPreviewCommand.qml QmlPreviewWindow.qml debian/qmledit-qmlpreview/opt/qmledit/commands/
+	cp QmlPreviewCommand.json QmlPreviewCommand.qml QmlPreviewWindow.qml debian/qmledit-qmlpreview/opt/qmledit/commands/
 
 # Build architecture-independent files here.
 binary-indep: build install
