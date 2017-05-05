@@ -10,6 +10,7 @@ app.files = \
     src/app/HelpDocument.qml \
     src/app/ListDocument.qml \
     src/app/MainWindow.qml \
+    src/app/SettingsDocument.qml \
     src/app/StatusBar.qml \
     src/app/SyntaxHighlighters.qml \
     src/app/TextEditDocument.qml \
@@ -33,6 +34,8 @@ commands.files = \
     src/commands/ForceCloseAllCommand.qml \
     src/commands/ForceCloseCommand.json \
     src/commands/ForceCloseCommand.qml \
+    src/commands/ForceEditCommand.json \
+    src/commands/ForceEditCommand.qml \
     src/commands/ForceQuitCommand.json \
     src/commands/ForceQuitCommand.qml \
     src/commands/HelpCommand.json \
@@ -41,6 +44,12 @@ commands.files = \
     src/commands/JumpCommand.qml \
     src/commands/ListCommand.json \
     src/commands/ListCommand.qml \
+    src/commands/NewCommand.json \
+    src/commands/NewCommand.qml \
+    src/commands/NextCommand.json \
+    src/commands/NextCommand.qml \
+    src/commands/PreviousCommand.json \
+    src/commands/PreviousCommand.qml \
     src/commands/QuitCommand.json \
     src/commands/QuitCommand.qml \
     src/commands/ReadFileCommand.json \
