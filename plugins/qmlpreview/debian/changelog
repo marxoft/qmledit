@@ -1,3 +1,9 @@
+qmledit-qmlpreview (0.0.2) unstable; urgency=low
+
+  * Close preview window when the editing document is closed.
+
+ -- Stuart Howarth <showarth@marxoft.co.uk>  Fri, 05 May 2017 20:45:04 +0000
+
 qmledit-qmlpreview (0.0.1) unstable; urgency=low
 
   * Initial Release.
