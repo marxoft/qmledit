@@ -23,11 +23,16 @@ import org.hildon.components 1.0
  *
  * The Command class is used for extending the programmatic functionality of QMLEdit.
  *
- * Commands may access the 'documentView' object (see the DocumentView class) to add, edit and remove documents.
+ * In addition to the properties, functions and signals of the Command class, commands
+ * may use the following:
+ *
+ * The 'window' property: The main application window.
+ * The 'documentView' property: The container for all Document items (see the DocumentView class).
+ * The 'currentTheme' property: The currently active theme (see the Theme class).
  *
  * To create custom documents, use the Document and TextEditDocument classes.
  *
- * \sa Document, TextEditDocument, DocumentView
+ * \sa Document, TextEditDocument, DocumentView, Theme
  */
 Object {
     id: root
@@ -96,5 +101,25 @@ Object {
      * This signal should be emitted when any work is finished.
      */
     signal finished
+
+    /*!
+     * Creates a Component from \a url.
+     *
+     * Commands should this function instead of Qt.createComponent() to ensure that the
+     * component remains valid after the command object is destroyed.
+     */
+    function createComponent(url) {
+        return window.createComponent(url);
+    }
+
+    /*!
+     * Creates a QML object from the string \a qml with parent \a parent.
+     *
+     * Commands should use this function instead of Qt.createQmlObject() to ensure that the
+     * component used to create the object remains valid after the command object is destroyed.
+     */
+    function createQmlObject(qml, parent, filepath) {
+        return window.createQmlObject(qml, parent, filepath);
+    }
 }
 
