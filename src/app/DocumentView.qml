@@ -118,13 +118,29 @@ FocusScope {
     }
 
     /*!
-     * Returns the document at \a index.
+     * Returns the document at \a index, or \c null if the index is out of range.
      *
      * @param type:int index
      * @return type:Document
      */
     function getDocument(index) {
         return view.getTab(index);
+    }
+
+    /*!
+     * Returns the index of \a document, or \c -1 if the document is not found.
+     *
+     * @param type:Document document
+     * @return type:int
+     */
+    function indexOf(document) {
+        for (var i = 0; i < count; i++) {
+            if (getDocument(i) === document) {
+                return i;
+            }
+        }
+
+        return -1;
     }
 
     /*!
@@ -174,11 +190,11 @@ FocusScope {
      * @return type:bool
      */
     function removeDocument(document) {
-        for (var i = 0; i < count; i++) {
-            if (getDocument(i) === document) {
-                view.removeTab(i);
-                return true;
-            }
+        var i = indexOf(document);
+
+        if (i >= 0) {
+            view.removeTab(i);
+            return true;
         }
 
         return false;
@@ -219,6 +235,7 @@ FocusScope {
         ListDocument {
             id: list
 
+            documents: documentView.documents
             onRemoveRequested: {
                 var document = root.getDocument(index);
                 
