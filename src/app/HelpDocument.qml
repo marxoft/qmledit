@@ -23,6 +23,7 @@ TextEditDocument {
     showLineNumbers: false
     textFormat: TextEdit.RichText
     wrapMode: Text.Wrap
+    readOnly: true
     Component.onCompleted: {
         var t = "<img src='/usr/share/icons/hicolor/48x48/apps/qmledit.png' />"
         + "<p style='font-weight: bold'>QMLEdit " + Definitions.VERSION_NUMBER + "</p>"
