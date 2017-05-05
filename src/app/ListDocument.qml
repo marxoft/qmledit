@@ -17,6 +17,8 @@
 import QtQuick 1.0
 
 TextEditDocument {
+    property variant documents
+
     signal removeRequested(int index)
     signal selected(int index)
 
@@ -26,16 +28,15 @@ TextEditDocument {
     showLineNumbers: false
     selectByMouse: false
     readOnly: true
-    Component.onCompleted: {
+    onDocumentsChanged: {
         var titles = [];
 
-        for (var i = 0; i < documentView.count; i++) {
-            titles.push(documentView.getDocument(i).title);
+        for (var i = 0; i < documents.length; i++) {
+            titles.push(documents[i].title);
         }
 
         text = titles.join("\n");
         modified = false;
-        jumpTo(documentView.currentIndex);
     }
     Keys.onPressed: {
         switch (event.key) {
