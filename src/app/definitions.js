@@ -18,7 +18,7 @@
 
 var CONFIG_PATH = "/home/user/.config/qmledit/";
 var APP_CONFIG_FILE = CONFIG_PATH + "settings";
-var VERSION_NUMBER = "0.1.0";
+var VERSION_NUMBER = "0.2.0";
 
 var COMMAND_PLUGIN_PATHS = ["/opt/qmledit/commands/", "/home/user/.qmledit/commands/"];
 var HIGHLIGHTER_PLUGIN_PATHS = ["/opt/qmledit/highlighters/", "/home/user/.qmledit/highlighters/"];
