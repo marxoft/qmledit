@@ -8,7 +8,7 @@ Homepage: https://github.com/marxoft/qmledit
 
 Package: qmledit-qmlpreview
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, qmledit (>= 0.1.0)
+Depends: ${shlibs:Depends}, ${misc:Depends}, qmledit (>= 0.2.0)
 Description: QML preview plugin for the QMLEdit text editor
  QMLEdit - QML Preview is a plugin that allows you to test QML code using
  the text from the currently active document.
